@@ -1,0 +1,125 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+		<title>Obiecte</title>
+		<style>
+			* { box-sizing: border-box; }
+
+			.ecuson {
+				width: 60mm;
+				height: 90mm;
+				border: 1px solid #CCC;
+				border-radius: 5px;
+				position: relative;
+				padding: 5px;
+				display: inline-block;
+				margin: 10px;
+				font-family: "Roboto", sans-serif;
+				font-weight: bold;
+				text-align: center;
+				color: #78c4ff;
+			}
+
+			.raliu {
+				margin-top: 15px;
+				font-family: "Times New Roman", Times, serif;
+				font-size: 28px;
+				color: #015977;
+				width: 100%;
+			}
+
+			.nume {
+				margin-top: 15px;
+				font-size: 16px;
+				width: 100%;
+			}
+
+			.rol {
+				margin-top: 15px;
+				font-size: 14px;
+				font-style: italic;
+				width: 100%;
+			}
+
+			.img {
+				width: 120px;
+				height: auto;
+				display: inline-block;
+				position: absolute;
+				top: 170px;
+				left: 5px;
+			}
+
+			.qr {
+				width: 100px;
+				height: auto;
+				display: inline-block;
+				position: absolute;
+				top: 170px;
+				left: 120px;
+			}
+
+			.qr>img {
+				width: 100px;
+				height: auto;
+			}
+
+			.numar {
+				width: 100px;
+				height: auto;
+				display: inline-block;
+				position: absolute;
+				right: 5px;
+				bottom: 10px;
+				font-size: 18px;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h2>Ecusoane pentru raliu</h2>
+		<div>
+			<div class="ecuson">
+				<div class="raliu">2020 CLUJ<br>RALLY</div>
+				<div class="nume">ELTHON SMITH</div>
+				<div class="car">Ferrari</div>
+				<div class="rol">pilot</div>
+				<div class="img"><img src="imagini/243p.jpg" /></div>
+				<div class="qr"><img src="imagini/243.png" /></div>
+				<div class="numar">Nr: 243</div>
+			</div>
+			<div class="ecuson">
+				<div class="raliu">2020 CLUJ<br>RALLY</div>
+				<div class="nume">BRITNEY THOMPSON</div>
+				<div class="car">Ferrari</div>
+				<div class="rol">copilot</div>
+				<div class="img"><img src="imagini/243c.jpg" /></div>
+				<div class="qr"><img src="imagini/243.png"></div>
+				<div class="numar">Nr: 243</div>
+			</div>
+		</div>
+		<script>
+			"use strict";
+			const echipaj = {
+	 pilot: "ELTHON SMITH",
+	 copilot: "BRITNEY THOMPSON",
+	 numar: "243",
+	 car: "Ferrari",
+	 imaginep: "243p.jpg",
+	 inaginec: "243c.jpg",
+	 codeqr: "243.png",
+	 };
+	 const { pilot, copilot, numar, imaginep, imaginec, codeqr } = echipaj;
+	 document.querySelector("#nume").innerHTML = pilot;
+	 document.querySelector("#nume").innerHTML = copilot;
+	 document.querySelector("#numar").innerHTML = numar;
+	 document.querySelector("#img").src = "imagini/" + echipaj.imaginep;
+	 document.querySelector("#img").src = "imagini/" + echipaj.imaginec;
+	 document.querySelector("#qr").src = "imagini/" + echipaj.codeqr;
+	 
+			 </script>
+	</body>
+	</html>
